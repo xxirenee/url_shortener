@@ -1,12 +1,15 @@
-// require packages used in the project
 const express = require('express')
+const mongoose = require('mongoose')
+
+require('./config/mongoose')
 const app = express()
 const port = 3000
 
-// routes setting
-app.get('/', (req, res) => {
-  res.send('This is my movie list built with Express')
-})
+
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+
+
 
 // start and listen on the Express server
 app.listen(port, () => {
