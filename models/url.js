@@ -4,10 +4,10 @@ const urlSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  shorten: {
+  shortenUrl: {
     type: String,
     required: true
   }
 })
 
-module.exports = mongoose.model('Url', urlSchema)
+module.exports = mongoose.model('URL', urlSchema)
