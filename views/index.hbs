@@ -15,11 +15,19 @@
 </div>
 
 {{#if short}}
-<div class="alert alert-success text-center mt-5" role="alert">
-  <h4>Success, please copy this Link!</h4>
+<div class="alert alert-success text-center mt-5">
+  <h4>Success, please use this Link!</h4>
 </div>
-<div class=" d-inline-block text-center" id="shorturl" style="width: 50vw">
-  <h5>{{short}}</h5>
-</div>
+<div class=" d-flex-inline text-center fs-4">
+  <p id="short-url">{{short}}</p>
 
+  <button class="d-inline btn btn-secondary m-2" onclick="copy()" >Copy</button>
+</div>
+<script>
+  function copy() {
+    let copyText = document.getElementById("short-url")
+    navigator.clipboard.writeText(copyText.innerText)
+    alert("Copied : " + copyText.innerText)
+  }
+</script>
 {{/if}}
