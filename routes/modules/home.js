@@ -36,6 +36,20 @@ router.post('/', (req, res) => {
     .catch(error => console.log(error))
 })
 
-
+router.get('/:shortenUrl', (req, res) => {
+  const { shortenUrl } = req.params
+  // check if there is shorturl in data, if not return error msg
+  URL.findOne({ shortenUrl })
+    .lean()
+    .then((data) => {
+      if (!data) {
+        return res.render('error', { errorLink: mainUrl + shortenUrl })
+      } else {
+        // redirect to originUrl
+        res.redirect(data.originUrl)
+      }
+    })
+    .catch((error) => console.log(error))
+})
 
 module.exports = router
