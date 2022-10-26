@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const urlSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+const urlSchema = new Schema({
   originUrl: {
     type: String,
     required: true
@@ -10,4 +11,4 @@ const urlSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('URL', urlSchema)
+module.exports = mongoose.model('Urls', urlSchema)

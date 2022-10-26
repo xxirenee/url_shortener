@@ -1,8 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
-const URL = require('./models/url')
-const getURL = require('./utilities/shortURL')
 
 require('./config/mongoose')
 const app = express()
