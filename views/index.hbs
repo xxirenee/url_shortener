@@ -1,16 +1,16 @@
 <div class="container">
-  <div class="row">
-    <div class ="col-12 col-lg-10 col-xl-8 mx-auto">
+  <div class="column align-items-center">
+    <div class ="text-center mt-5">
       <h1>URL Shortener</h1>
 
-      <img src="https://assets-lighthouse.alphacamp.co/uploads/image/file/16716/ExportedContentImage_00.png" width="400"
-      height="400" class="d-flex" alt="url short">
-    </div>
+      <img src="https://assets-lighthouse.alphacamp.co/uploads/image/file/16716/ExportedContentImage_00.png" width="300"
+      height="300" class="mt-5" alt="url short">
+
   <form action="/" method="POST">
-    <input class="form-control" type="url" name="url" placeholder="Input url here" value="{{originUrl}}"
-      style="width: 60vw">
-    <button type="submit" class="btn btn-success m-2 p-2">Shorten</button>
+    <input class="form-control mt-5 p-3 fs-4" type="url" name="url" placeholder="Input url here..." value="{{originUrl}}" required>
+    <button type="submit" class="btn btn-success m-2 p-3">Shorten</button>
   </form>
+  </div>
   </div>
 </div>
 
